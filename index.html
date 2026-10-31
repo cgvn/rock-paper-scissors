@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#101522">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="game">
+      <p class="eyebrow">A tiny game of chance</p>
+      <h1>Rock Paper Scissors</h1>
+      <p class="intro">Pick your move. First to five wins.</p>
+
+      <section class="scoreboard" aria-label="Score">
+        <div class="score">
+          <span class="score-label">You</span>
+          <strong id="player-score" aria-live="polite">0</strong>
+        </div>
+        <span class="score-divider" aria-hidden="true">:</span>
+        <div class="score">
+          <span class="score-label">Computer</span>
+          <strong id="computer-score" aria-live="polite">0</strong>
+        </div>
+      </section>
+
+      <p id="status" class="status" role="status" aria-live="polite">Choose your move to start.</p>
+      <div id="round-result" class="round-result" aria-live="polite"></div>
+
+      <div class="choices" aria-label="Choose your move">
+        <button class="choice" type="button" data-choice="rock">
+          <span class="choice-icon" aria-hidden="true">✊</span>
+          <span>Rock</span>
+        </button>
+        <button class="choice" type="button" data-choice="paper">
+          <span class="choice-icon" aria-hidden="true">✋</span>
+          <span>Paper</span>
+        </button>
+        <button class="choice" type="button" data-choice="scissors">
+          <span class="choice-icon" aria-hidden="true">✌️</span>
+          <span>Scissors</span>
+        </button>
+      </div>
+
+      <button id="reset" class="reset" type="button">Reset game</button>
+    </main>
+  </body>
+</html>
